@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZL Remote Control</title><link rel="stylesheet" href="/static/style.css"></head>
+<body><header><div class="logo">ZL<span>REMOTE</span></div><form method="post" action="/logout"><button class="secondary">Выйти</button></form></header>
+<main class="layout"><section class="panel">
+<div class="topline"><div><h1>Мой компьютер</h1><p class="muted">Основной монитор · Windows 11</p></div><div id="status" class="status offline">Не подключён</div></div>
+<div class="screen-wrap" id="screenWrap"><div id="placeholder">Нажмите «Подключиться», затем подтвердите запрос на ПК.</div><img id="screen" alt="Трансляция экрана" draggable="false"></div>
+<div class="controls"><button id="connect">Подключиться</button><button id="disconnect" class="secondary" disabled>Отключиться</button><button id="fullscreen" class="secondary">На весь экран</button></div>
+<p id="notice" class="muted" aria-live="polite">Ожидание подключения.</p>
+</section><aside class="panel info"><h2>Управление</h2><p>Нажимайте на изображение, чтобы перемещать курсор. Левый и правый клик доступны через мышь.</p>
+<label for="keyInput">Отправить клавишу или символ</label><div class="keyrow"><input id="keyInput" maxlength="1" placeholder="A"><button id="sendKey" class="secondary">Отправить</button></div>
+<p class="hint">Для безопасности передача работает только после локального подтверждения. Не закрывайте программу ZL Agent на компьютере.</p>
+</aside></main>
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script><script src="/static/app.js"></script>
+</body></html>
